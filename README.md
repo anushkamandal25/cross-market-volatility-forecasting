@@ -102,9 +102,11 @@ A key finding: TSLA's persistence (α + β ≈ 0.99) is near-integrated, meaning
 
 A 5-day volatility forecast is generated from each fitted model — variance forecast converted to daily volatility and annualised (×√252). **Parametric Value at Risk (95%)** is then estimated directly from the forecast:
 
-$$\text{VaR}_{95\%} = -(\mu - 1.645 \times \sigma_{\text{forecast}})$$
+$$
+\text{VaR}_{95\%} = -\left(\mu - 1.645 \times \sigma_{\text{forecast}}\right)
+$$
 
-At 95% confidence, TSLA's daily VaR is approximately 1.3× that of INFY — reflecting its structurally higher risk profile across the full forecast horizon.
+At 95% confidence, TSLA's daily VaR is approximately 1.3× that of INFY, reflecting its structurally higher risk profile across the full forecast horizon.
 
 ### 5. API Layer
 
@@ -157,6 +159,9 @@ sharp event-driven spikes from earnings surprises that resolve within days.
 
 ### 30-Day Rolling Annualised Volatility
 ![Rolling Volatility](plots/rolling_volatility.png)
+
+### Return Distributions
+![Return Distributions](plots/return_distributions.png)
 
 ### ACF & PACF of Squared Returns
 ![ACF PACF](plots/acf_pacf_squared_returns.png)
