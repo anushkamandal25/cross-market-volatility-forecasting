@@ -102,11 +102,14 @@ A key finding: TSLA's persistence (α + β ≈ 0.99) is near-integrated, meaning
 
 A 5-day volatility forecast is generated from each fitted model — variance forecast converted to daily volatility and annualised (×√252). **Parametric Value at Risk (95%)** is then estimated directly from the forecast:
 
-$$
-\text{VaR}_{95\%} = -\left(\mu - 1.645 \times \sigma_{\text{forecast}}\right)
-$$
+VaR₉₅% = −(μ − 1.645 × σ_forecast)
 
-At 95% confidence, TSLA's daily VaR is approximately 1.3× that of INFY, reflecting its structurally higher risk profile across the full forecast horizon.
+where:
+- μ = expected return
+- σ_forecast = forecasted volatility
+- 1.645 = z-score for a one-tailed 95% confidence level
+
+At 95% confidence, TSLA's daily VaR is approximately 1.3X that of INFY, reflecting its structurally higher risk profile across the full forecast horizon.
 
 ### 5. API Layer
 
